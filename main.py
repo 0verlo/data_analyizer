@@ -36,7 +36,7 @@ list_param = list(range(0,1025,16))
 list_param[0] = 1
 
 for i in list_param:
-    cmd = "/home/sen/Workspace/personal/data_collecter/proc/mem {:d}".format(i)
+    cmd = "stdbuf -o0 /home/sen/Workspace/personal/data_collecter/proc/mem {:d}".format(i)
     print(cmd)
     mem_analyze(cmd)
 analyzor.list_save()
